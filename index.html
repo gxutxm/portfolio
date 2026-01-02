@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GG's Portfolio | Enter the Room</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="loader-content">
+            <div class="pixel-spinner"></div>
+            <p class="loading-text">LOADING<span class="dots">...</span></p>
+            <p class="loading-hint">Preparing your adventure...</p>
+        </div>
+    </div>
+
+    <div id="game-container"></div>
+
+    <!-- Interaction Hint UI -->
+    <div id="interaction-hint" class="hidden">
+        <span class="key-hint">E</span> to interact
+    </div>
+
+    <!-- Modal System -->
+    <div id="modal-overlay" class="hidden">
+        <div id="modal-content">
+            <button id="modal-close">✕</button>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- Chatbot Modal -->
+    <div id="chatbot-overlay" class="hidden">
+        <div id="chatbot-container">
+            <div id="chatbot-header">
+                <span class="chatbot-title">🎧 GG's Helpdesk</span>
+                <button id="chatbot-close">✕</button>
+            </div>
+            <div id="chatbot-messages"></div>
+            <div id="chatbot-input-area">
+                <input type="text" id="chatbot-input" placeholder="Type your question...">
+                <button id="chatbot-send">▶</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jukebox Controls -->
+    <div id="jukebox-ui" class="hidden">
+        <div class="jukebox-panel">
+            <h3>🎵 JUKEBOX</h3>
+            <div class="track-display">
+                <span id="current-track">Chill Lofi Beats</span>
+            </div>
+            <div class="jukebox-controls">
+                <button id="prev-track">⏮</button>
+                <button id="play-pause">▶</button>
+                <button id="next-track">⏭</button>
+            </div>
+            <input type="range" id="volume-slider" min="0" max="100" value="50">
+            <button id="jukebox-close-btn">Close</button>
+        </div>
+    </div>
+
+    <!-- Controls Help -->
+    <div id="controls-help">
+        <span>WASD / Arrows = Move</span>
+        <span>E = Interact</span>
+    </div>
+
+    <!-- Phaser.js -->
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>
+    
+    <!-- Game Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/sprites.js"></script>
+    <script src="js/modals.js"></script>
+    <script src="js/scenes/BootScene.js"></script>
+    <script src="js/scenes/GameScene.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
